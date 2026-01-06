@@ -1,0 +1,39 @@
+/* src/index.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  overflow: hidden;
+}
+
+/* Контейнер для снежинок в шапке */
+.snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* высота шапки */
+  pointer-events: none; /* чтобы не мешали кликам */
+  z-index: 10;
+}
+
+.snowflake {
+  position: absolute;
+  top: -20px;
+  color: #bbdefb;
+  font-size: 20px;
+  opacity: 0.8;
+  user-select: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(60px) rotate(360deg);
+  }
+}
+
+
+.app-header {
+  position: relative;
+  z-index: 20;
+}
